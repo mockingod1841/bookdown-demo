@@ -1,21 +1,25 @@
-# Introduction {#intro}
+# Creating/editing pages {#addPage}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+Before we can make a wiki, we have to know how to do basic edits to a page. You'd be surprised at how many things require special attention to modify on the wiki.
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+## Wiki pages structure {#structure}
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+The iGEM wiki is structured in a very straightforward manner.
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+`http://[YEAR].igem.org/Team:[TEAM]` will lead you to the main page. Take note that there is **no backslash** after this. If you have a backslash, then you will go to a blank uncreated page.
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+There are many special pages that the judges take into consideration for determining what medal you will receive at the Jamboree. These pages can be found [here](http://2017.igem.org/Judging/Pages_for_Awards). For example, the `Attributions` page for your team will follow the structure `http://[YEAR].igem.org/Team:[TEAM]/Attributions`.
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+Additionally, the human practices pages are a bit funky, but they follow the same structure, they just have a `/HP/` before them. You *shouldn't* think about this as if it was a file pathway, but rather a page with the page title `/HP/Gold_Integrated` or so.
+
+## Working off an existing page {#existingPage}
+
+## Creating a new blank page {#blankPage}
+
+## Making a template for code {#template}
+
+## Including JavaScript and CSS {#includingJSCSS}
+
+## Overriding iGEM CSS
+
+## Using templates to put them all together {#putTogether}
