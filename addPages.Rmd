@@ -69,7 +69,85 @@ Perhaps one of the most **frustrating but important** part of working with iGEM'
 
 For things that aren't yet overridden and are causing errors, you will need to
 * Right click on the element that is bugging up
-* Inspect - This will pop up an inspection window. Under elements you will see a window for HTML, CSS of the selected element, and box model of the selected element.
+* Inspect - This will pop up an inspection window. Under elements you will see a window for HTML, CSS of the selected element, and box model of the selected element.<br/>![Inspection pane](inspectPanel.png)
+* In the above, for example, let's say we want to delete this from showing.
+* In a custom CSS Template (\@ref(template)) we override the class by putting the same class name
+
+```
+#top_title {
+  display: none;
+  width: 0px;
+}
+```
+
+The final step will require the most problem solving skills to figure out what is being overridden. It takes time to get a feel for what exactly is wrong. Thankfully, you'll encounter this problem the least with the following override code:
+
+```
+#sideMenu,
+#top_title {
+  display: none;
+  width: 0px;
+}
+#bodyContent a[href ^="https://"], .link-https {
+  padding-right: 0px;
+}
+#content {
+  width: 100%;
+  padding: 0px;
+  border: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  position: relative;
+}
+#globalWrapper {
+  padding-bottom: 0;
+  font-size: 100%;
+}
+#top_menu_under {
+  height: 0px;
+}
+#top_menu_14 {
+  height: 22px;
+}
+#HQ_page h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: INSERTFONT, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  padding: 0px;
+  line-height: normal;
+  }
+#HQ_page p {
+  font-family: INSERTFONT, Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-align: left;
+  font-size: 1.25rem;
+}
+#top_menu_inside #user_item {
+  float: left;
+  padding-top: 0px;
+  margin-right: none;
+}
+#bodyContent a[href ^="mailto:"], .link-mailto {
+    padding-right: 0px;
+    background: none;
+}
+```
+
+Though, your job isn't done there. You'll want to mess around with that code to change what fonts you're using.
+
+## Clearing cache {#cache}
+
+> "Why did the page stay the same????"
+
+My friend, you'll want to learn about a magical thing called clearing your cache. The cache is a temporary storage for web browsers that allows the web page to be loaded faster. Things like images, CSS, JavaScript, etc. all get stored in cache so the next time the page is loaded, it will load faster.
+
+**Easy way to clear cache**: You can go to your browser settings and clear the cache, or you can also go to `F12 (or right click > inspect)` > `top right corner 3 dots` > `settings` > `scroll down to network` > `Disable cache (while DevTools is open)`
+
+Now, whenever you press `F12` on your keyboard to bring up the inspect panel, then refresh the page, the cache for the page will instantly be cleared and you will have the latest update of the page.
 
 ## Including JavaScript and CSS {#includingJSCSS}
 
