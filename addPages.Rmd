@@ -110,7 +110,18 @@ You don't have to follow this guide entirely, but what we've been doing with our
 </html>
 ```
 
-Then, on a page like the one we made in \@ref()
+Then, on a page like the one we made in section \@ref(blankPage) we have the following code:
+
+```
+{{Washington/Includes}}
+<html>
+  <body>
+    ...
+  </body>
+</html>
+```
+
+Even though you have your own CSS and JavaScript on the page doesn't mean you're ready yet. Read on to learn about overriding iGEM's default CSS.
 
 ## Overriding iGEM CSS {#overrideCSS}
 Perhaps one of the most **frustrating but important** part of working with iGEM's MediaWiki system is overriding their default CSS. No matter how much you try to override, sometimes there will still be minute bugs due to not overriding part of the code. At the bottom of this section, there is a code that you simply need to copy paste into a new template (\@ref(template)) to override a good amount of iGEM CSS.
